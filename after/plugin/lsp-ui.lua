@@ -11,10 +11,10 @@ keymap("v", "<leader>ca", "<cmd>Lspsaga range_code_action<CR>", { silent = true 
 keymap("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", { silent = true })
 
 -- Definition preview
-keymap("n", "<space>sd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+keymap("n", "<space>pd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
 
 -- Show line diagnostics
-keymap("n", "<leader>sp", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
+keymap("n", "<leader>sd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
 
 -- Show cursor diagnostic
 keymap("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
