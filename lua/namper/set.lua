@@ -16,6 +16,8 @@ vim.opt.showmode = false -- hide -- Insert -- status
 
 vim.opt.undofile = true -- use undo file instead of memory
 
+vim.opt.termguicolors = true
+
 
 -- 4 spaces instead of tab
 vim.opt.tabstop = 4

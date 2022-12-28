@@ -58,6 +58,18 @@ require('lspconfig')['rust_analyzer'].setup{
     }
 }
 
+require("lspconfig")["eslint"].setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities=capabilities,
+	root_dir = function(filename, bufnr)
+		if string.find(filename, "node_modules/") then
+			return nil
+		end
+		return require("lspconfig.server_configurations.eslint").default_config.root_dir(filename, bufnr)
+	end
+}
+
 -- code completion
 vim.opt.completeopt = {"menu", "menuone", "noselect"}
 
