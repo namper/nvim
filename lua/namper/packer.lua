@@ -57,5 +57,7 @@ return require('packer').startup(function(use)
     use {"lukas-reineke/indent-blankline.nvim"}
     -- lua line
     use 'nvim-lualine/lualine.nvim'
+    -- Debugpy
+    use 'HiPhish/debugpy.nvim'
 end
 )

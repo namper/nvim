@@ -1,5 +1,5 @@
 local keymap = vim.keymap.set
-require("lspsaga").init_lsp_saga()
+require("lspsaga").setup({})
 
 keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
 

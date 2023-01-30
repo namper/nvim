@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/namper/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["debugpy.nvim"] = {
+    loaded = true,
+    path = "/Users/namper/.local/share/nvim/site/pack/packer/start/debugpy.nvim",
+    url = "https://github.com/HiPhish/debugpy.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/namper/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",

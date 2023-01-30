@@ -29,6 +29,9 @@ vim.opt.expandtab = true
 -- smart indentation
 vim.opt.smartindent = true
 
+-- 
+vim.opt.tabline = ""
+
 -- nohlsearch
 vim.opt.hlsearch = false
 
@@ -44,6 +47,3 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.cmd("filetype indent plugin on")
-
-
-vim.cmd [[ highlight ColorColumn ctermbg=7 ]]
