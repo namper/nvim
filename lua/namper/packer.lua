@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
     use 'lewis6991/spellsitter.nvim'
     -- Debug Protocol
     use 'mfussenegger/nvim-dap'
+    use 'mfussenegger/nvim-dap-python'
     use 'mfussenegger/nvim-lint'
     use 'rcarriga/nvim-dap-ui'
     use 'theHamsta/nvim-dap-virtual-text'
