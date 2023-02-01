@@ -1,5 +1,4 @@
-## init.lua
-Neovim config
+My Neovim config
 
 ----
 For setup create symlink to config directory
