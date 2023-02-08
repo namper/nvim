@@ -3,6 +3,7 @@ vim.opt.nu = true -- current line
 
 vim.opt.clipboard = 'unnamedplus' -- shared clipboard
 vim.g.mapleader = " "  -- leader
+vim.g.localleader = ","  -- local-leader
 
 vim.opt.showcmd = false -- show commands in status line
 

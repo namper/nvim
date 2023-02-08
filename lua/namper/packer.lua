@@ -59,5 +59,10 @@ return require('packer').startup(function(use)
     use 'HiPhish/debugpy.nvim'
     -- 'Neovim as LSP Server'
     use "jose-elias-alvarez/null-ls.nvim"
+    -- Neorg
+    use {
+        "nvim-neorg/neorg",
+        run = ":Neorg sync-parsers", -- This is the important bit!
+    }
 end
 )
