@@ -59,5 +59,7 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
     -- Debugpy
     use 'HiPhish/debugpy.nvim'
+    -- 'Neovim as LSP Server'
+    use "jose-elias-alvarez/null-ls.nvim"
 end
 )
