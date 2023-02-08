@@ -37,8 +37,6 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     -- Surround
     use 'machakann/vim-sandwich'
-    -- flake8
-    use 'nvie/vim-flake8'
     -- neoformat
     use 'sbdchd/neoformat'
     -- Context
