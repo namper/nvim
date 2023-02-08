@@ -1,6 +1,5 @@
-Neovim config
+# Neovim config
 
-----
 
 ## symlinking
 ```
