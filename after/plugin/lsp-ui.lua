@@ -10,6 +10,13 @@ require("lspsaga").setup({
         respect_root = false,
         color_mode = true,
       },
+      lightbulb = {
+        enable = false,
+        enable_in_insert = false,
+        sign = true,
+        sign_priority = 40,
+        virtual_text = false,
+      },
 })
 
 keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
