@@ -5,6 +5,9 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     -- Tokyooo
     use 'folke/tokyonight.nvim'
+    -- Gruv
+    use 'almo7aya/neogruvbox.nvim'
+    use 'yorickpeterse/vim-paper'
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -35,6 +38,7 @@ return require('packer').startup(function(use)
     -- Git
     use 'tpope/Vim-fugitive'
     use 'lewis6991/gitsigns.nvim'
+    use 'tpope/vim-rhubarb'
     -- Surround
     use 'machakann/vim-sandwich'
     -- neoformat
