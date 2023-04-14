@@ -37,8 +37,8 @@ vim.opt.tabline = ""
 vim.opt.hlsearch = false
 
 -- cursors
-vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
-vim.opt.cursorline = true -- cursor line
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,a:blinkon50"
+vim.opt.cursorline = false -- cursor line
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -46,5 +46,9 @@ vim.opt.isfname:append("@-@")
 
 -- update time
 vim.opt.updatetime = 50
+
+-- Disable comment continuation
+vim.opt.formatoptions:remove{ "r", "c", "o" }
+vim.cmd([[autocmd BufEnter * set formatoptions-=cro]])
 
 vim.cmd("filetype indent plugin on")
