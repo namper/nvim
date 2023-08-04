@@ -81,8 +81,5 @@ return require('packer').startup(function(use)
         'github/copilot.vim',
         branch = 'release' 
     }
-    use {
-        "catppuccin/nvim", as= "cattpuccin"
-    }
 end
 )

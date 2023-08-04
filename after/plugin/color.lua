@@ -16,4 +16,5 @@ require("tokyonight").setup({
   end
 })
 
-vim.cmd [[colorscheme tokyonight-night]]
+-- setup must be called before loading
+vim.cmd.colorscheme "tokyonight"
