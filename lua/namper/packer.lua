@@ -21,9 +21,9 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
     -- Tree sitter
     use 'nvim-treesitter/nvim-treesitter'
-    use 'lewis6991/spellsitter.nvim'
     -- Debug Protocol
     use 'mfussenegger/nvim-dap'
     use 'mfussenegger/nvim-dap-python'
@@ -63,10 +63,26 @@ return require('packer').startup(function(use)
     use 'HiPhish/debugpy.nvim'
     -- 'Neovim as LSP Server'
     use "jose-elias-alvarez/null-ls.nvim"
+    use "davidmh/cspell.nvim"
     -- Neorg
     use {
         "nvim-neorg/neorg",
         run = ":Neorg sync-parsers", -- This is the important bit!
+    }
+    -- Db UI
+    use {
+      "tpope/vim-dadbod",
+      requires = { 
+       "kristijanhusak/vim-dadbod-ui",  
+       "kristijanhusak/vim-dadbod-completion" 
+      },
+    }
+    use {
+        'github/copilot.vim',
+        branch = 'release' 
+    }
+    use {
+        "catppuccin/nvim", as= "cattpuccin"
     }
 end
 )
