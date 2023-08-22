@@ -16,5 +16,25 @@ require("tokyonight").setup({
   end
 })
 
+-- require("noirbuddy").setup({
+--     preset = 'kiwi',
+-- })
+
+vim.cmd.colorscheme "tokyonight-moon"
+
+
+-- vim.api.nvim_set_hl(0, "IndentBlanklineSpaceCharBlankline", {  fg='#ffa500', bg='#161a19' })
+-- vim.api.nvim_set_hl(0, "IndentBlanklineChar", {  fg='#737373', bg='#161a19' })
+-- vim.api.nvim_set_hl(0, "IndentBlanklineContextChar", {  fg='#ffa500', bg='#161a19' })
+-- vim.api.nvim_set_hl(0, "IndentBlanklineContextStart", {  fg='#ffa500', bg='#161a19' })
+-- vim.api.nvim_set_hl(0, "IndentBlanklineSpaceChar", {  fg='#ffa500', bg='#161a19' })
+
+-- vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextError',{  fg='#ffa500', bg='#161a19' })
+-- vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarn', {  fg='#ffa500', bg='#161a19' })
+-- vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextInfo', {  fg='#ffa500', bg='#161a19' })
+-- vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextHint', {  fg='#ffa500', bg='#161a19' })
+
 -- setup must be called before loading
-vim.cmd.colorscheme "tokyonight"
+-- vim.cmd [[ "background = light"  ]]
+vim.api.nvim_set_hl(0, "CursorLineNr", {  fg='#ffa500',})
+-- vim.cmd.colorscheme "miami-nights"

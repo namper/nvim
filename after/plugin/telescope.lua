@@ -3,7 +3,10 @@ require('telescope').setup{
     -- Default configuration for telescope goes here:
     -- config_key = value,
     mappings = {
-      i = {}
+      i = {
+            ["<C-j>"] = "move_selection_next",
+            ["<C-k>"] = "move_selection_previous",
+        }
     }
   },
   pickers = {

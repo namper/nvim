@@ -11,9 +11,11 @@ vim.opt.mouse = "a" -- mouse reporting (sacrilegious)
 vim.opt.encoding = "utf-8" -- encoding
 
 vim.opt.spell = true -- enable spell checking
+vim.opt.spelloptions = "camel" -- consider camel cases as separate word.
+vim.opt.spellcapcheck = "" -- No need to check for capitalization
 
-vim.opt.laststatus = 0 -- no status line
-vim.opt.showmode = false -- hide -- Insert -- status
+-- vim.opt.laststatus = 1 -- no status line
+-- vim.opt.showmode = true -- hide -- Insert -- status
 
 vim.opt.undofile = true -- use undo file instead of memory
 
@@ -38,7 +40,8 @@ vim.opt.hlsearch = false
 
 -- cursors
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,a:blinkon50"
-vim.opt.cursorline = false -- cursor line
+vim.opt.cursorline = true -- cursor line
+vim.opt.cursorlineopt='number'
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
