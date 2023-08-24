@@ -9,9 +9,17 @@ vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { fg='#87847c', bg='#161a1
 
 vim.api.nvim_set_hl(0, "@string", { fg='#9ece6a'})
 vim.api.nvim_set_hl(0, "@boolean", { fg='orange'})
-vim.api.nvim_set_hl(0, "@constant", { fg='orange'})
+-- vim.api.nvim_set_hl(0, "@constant", { fg='orange'})
 vim.api.nvim_set_hl(0, "@type.builtin", { fg='#229986'})
 vim.api.nvim_set_hl(0, "@number", { fg='#6897bb'})
+vim.api.nvim_set_hl(0, "@variable", { fg='#d5d5d5'})
+vim.api.nvim_set_hl(0, "@method.call", { fg='#229986'})
+-- vim.api.nvim_set_hl(0, "@function.call", { fg='#229986'})
+vim.api.nvim_set_hl(0, "@keyword", { fg='orange'})
+vim.api.nvim_set_hl(0, "@keyword.operator", { fg='orange'})
+vim.api.nvim_set_hl(0, "@keyword.function", { fg='orange'})
+vim.api.nvim_set_hl(0, "@conditional", { fg='orange'})
+
 
 
 -- Indent line highlights
