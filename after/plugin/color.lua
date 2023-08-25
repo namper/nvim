@@ -19,8 +19,7 @@ vim.api.nvim_set_hl(0, "@keyword", { fg='orange'})
 vim.api.nvim_set_hl(0, "@keyword.operator", { fg='orange'})
 vim.api.nvim_set_hl(0, "@keyword.function", { fg='orange'})
 vim.api.nvim_set_hl(0, "@conditional", { fg='orange'})
-
-
+vim.api.nvim_set_hl(0, "@constant.builtin", { fg='orange'})
 
 -- Indent line highlights
 vim.api.nvim_set_hl(0, "IndentBlanklineSpaceCharBlankline", {  fg='#ffa500', bg='#161a19' })
