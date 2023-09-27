@@ -20,6 +20,14 @@ vim.api.nvim_set_hl(0, "@keyword.operator", { fg='orange'})
 vim.api.nvim_set_hl(0, "@keyword.function", { fg='orange'})
 vim.api.nvim_set_hl(0, "@conditional", { fg='orange'})
 vim.api.nvim_set_hl(0, "@constant.builtin", { fg='orange'})
+vim.api.nvim_set_hl(0, "@keyword.return", { fg='orange'})
+vim.api.nvim_set_hl(0, "@repeat", { fg='orange'})
+vim.api.nvim_set_hl(0, "@variable.builtin", { fg='#fa939f'})
+vim.api.nvim_set_hl(0, "@exception", { fg='orange'})
+vim.api.nvim_set_hl(0, "@parameter", { fg='#ffffff'})
+vim.api.nvim_set_hl(0, "@function.builtin", { fg='#229986'})
+vim.api.nvim_set_hl(0, "@string.escape", {fg="orange"})
+
 
 -- Indent line highlights
 vim.api.nvim_set_hl(0, "IndentBlanklineSpaceCharBlankline", {  fg='#ffa500', bg='#161a19' })

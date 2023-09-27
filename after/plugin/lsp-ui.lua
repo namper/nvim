@@ -3,7 +3,7 @@ local keymap = vim.keymap.set
 require("lspsaga").setup({
       symbol_in_winbar = {
         enable = false,
-        separator = " ",
+        separator = "წერტილი",
         hide_keyword = true,
         show_file = true,
         folder_level = 2,

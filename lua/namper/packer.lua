@@ -85,5 +85,8 @@ return require('packer').startup(function(use)
         "jesseleite/nvim-noirbuddy",
         requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
     }
+    use {
+        "folke/neodev.nvim"
+    }
 end
 )

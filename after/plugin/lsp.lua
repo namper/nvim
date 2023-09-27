@@ -1,3 +1,7 @@
+-- Neo-Dev
+require("neodev").setup({
+  -- add any options here, or leave empty to use the default settings
+})
 -- capabilities
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Mappings.
@@ -68,6 +72,19 @@ require("lspconfig")["eslint"].setup {
 		end
 		return require("lspconfig.server_configurations.eslint").default_config.root_dir(filename, bufnr)
 	end
+}
+
+require("lspconfig")["lua_ls"].setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities=capabilities,
+    settings = {
+        Lua = {
+          completion = {
+            callSnippet = "Replace"
+          }
+        }
+      }
 }
 
 -- code completion
