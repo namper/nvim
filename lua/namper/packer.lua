@@ -72,14 +72,14 @@ return require('packer').startup(function(use)
     -- Db UI
     use {
       "tpope/vim-dadbod",
-      requires = { 
-       "kristijanhusak/vim-dadbod-ui",  
-       "kristijanhusak/vim-dadbod-completion" 
+      requires = {
+       "kristijanhusak/vim-dadbod-ui",
+       "kristijanhusak/vim-dadbod-completion"
       },
     }
     use {
         "github/copilot.vim",
-        branch = 'release' 
+        branch = 'release'
     }
     use {
         "jesseleite/nvim-noirbuddy",
@@ -87,6 +87,13 @@ return require('packer').startup(function(use)
     }
     use {
         "folke/neodev.nvim"
+    }
+    use {
+        'Julian/lean.nvim',
+        requires = {
+            'neovim/nvim-lspconfig',
+            'nvim-lua/plenary.nvim',
+        }
     }
 end
 )

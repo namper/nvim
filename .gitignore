@@ -2,3 +2,4 @@ plugin/*
 
 db_ui/connections.json
 spell/*
+.luarc.json
