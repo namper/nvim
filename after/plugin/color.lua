@@ -27,7 +27,8 @@ vim.api.nvim_set_hl(0, "@exception", { fg='orange'})
 vim.api.nvim_set_hl(0, "@parameter", { fg='#ffffff'})
 vim.api.nvim_set_hl(0, "@function.builtin", { fg='#229986'})
 vim.api.nvim_set_hl(0, "@string.escape", {fg="orange"})
-
+-- lean
+vim.api.nvim_set_hl(0, "@lsp.type.keyword", { fg='orange'})
 
 -- Indent line highlights
 vim.api.nvim_set_hl(0, "IndentBlanklineSpaceCharBlankline", {  fg='#ffa500', bg='#161a19' })
@@ -37,3 +38,7 @@ vim.api.nvim_set_hl(0, "IndentBlanklineContextStart", {  fg='#ffa500', bg='#161a
 vim.api.nvim_set_hl(0, "IndentBlanklineSpaceChar", {  fg='#ffa500', bg='#161a19' })
 -- Spell
 vim.api.nvim_set_hl(0, "SpellBad", {  fg='red', })
+
+
+-- NO BACKGROUND
+-- vim.api.nvim_set_hl(0, "Normal", { ctermbg="", bg='',})
