@@ -1,6 +1,6 @@
 require("ibl").setup {
     indent = {
-        char = "▎",
+        char = "┊",
         tab_char = nil,
         highlight = "IblIndent",
         smart_indent_cap = true,
