@@ -47,6 +47,9 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
+vim.opt.list = true
+vim.opt.listchars = { trail="." }
+
 -- update time
 vim.opt.updatetime = 50
 

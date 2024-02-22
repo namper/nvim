@@ -48,3 +48,6 @@ vim.api.nvim_set_hl(0, "TreesitterContextSeparator", {  fg='#323232', bg="#161a1
 -- NO BACKGROUND
 -- vim.api.nvim_set_hl(0, "Normal", { ctermbg="", bg='',})
 vim.api.nvim_set_hl(0, "Normal", { bg='#131919',})
+
+
+-- @TODO: Add more colors
