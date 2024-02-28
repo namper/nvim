@@ -10,6 +10,8 @@ vim.opt.showcmd = false -- show commands in status line
 vim.opt.mouse = "a" -- mouse reporting (sacrilegious)
 vim.opt.encoding = "utf-8" -- encoding
 
+vim.opt.inccommand = "split"
+
 vim.opt.spell = true -- enable spell checking
 vim.opt.spelloptions = "camel" -- consider camel cases as separate word.
 vim.opt.spellcapcheck = "" -- No need to check for capitalization
