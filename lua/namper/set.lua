@@ -50,7 +50,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.list = true
-vim.opt.listchars = { trail="." }
+vim.opt.listchars = { trail=".", tab="▸ ", nbsp="␣" }
 
 -- update time
 vim.opt.updatetime = 50

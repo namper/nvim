@@ -28,7 +28,10 @@ return require('packer').startup(function(use)
     use 'mfussenegger/nvim-dap'
     use 'mfussenegger/nvim-dap-python'
     use 'mfussenegger/nvim-lint'
-    use 'rcarriga/nvim-dap-ui'
+    use {
+        "rcarriga/nvim-dap-ui",
+        requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"}
+    }
     use 'theHamsta/nvim-dap-virtual-text'
     use 'L3MON4D3/LuaSnip'
     -- Dev icons
@@ -59,16 +62,9 @@ return require('packer').startup(function(use)
     use {"lukas-reineke/indent-blankline.nvim"}
     -- lua line
     use 'nvim-lualine/lualine.nvim'
-    -- Debugpy
-    use 'HiPhish/debugpy.nvim'
     -- 'Neovim as LSP Server'
     use "jose-elias-alvarez/null-ls.nvim"
     use "davidmh/cspell.nvim"
-    -- Neorg
-    use {
-        "nvim-neorg/neorg",
-        run = ":Neorg sync-parsers", -- This is the important bit!
-    }
     -- Db UI
     use {
       "tpope/vim-dadbod",
@@ -83,7 +79,7 @@ return require('packer').startup(function(use)
     }
     use {
         "jesseleite/nvim-noirbuddy",
-        requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
+        requires = { "tjdevries/colorbuddy.nvim"}
     }
     use {
         "folke/neodev.nvim"
@@ -98,5 +94,18 @@ return require('packer').startup(function(use)
     use {
         'lervag/vimtex',
     }
+    use {
+        "smoka7/multicursors.nvim",
+        requires = {
+            'smoka7/hydra.nvim',
+        }
+    }
+    use {
+      "jiaoshijie/undotree",
+      requires = {
+        "nvim-lua/plenary.nvim",
+      },
+    }
+
 end
 )

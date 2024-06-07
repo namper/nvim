@@ -1,8 +1,6 @@
 local nnoremap = require("namper.keymap").nnoremap
 
-
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
-
 
 -- Telescope
 nnoremap("<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
@@ -19,7 +17,10 @@ nnoremap("<silent> <F11>", "<Cmd>lua require'dap'.step_into()<CR>")
 nnoremap("<silent> <F12>", "<Cmd>lua require'dap'.step_out()<CR>")
 nnoremap("<silent> <Leader>b", "<Cmd>lua require'dap'.toggle_breakpoint()<CR>")
 nnoremap("<silent> <Leader>B", "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
-nnoremap("<silent> <Leader>lp", "<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
+nnoremap(
+	"<silent> <Leader>lp",
+	"<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>"
+)
 nnoremap("<silent> <Leader>dr", "<Cmd>lua require'dap'.repl.open()<CR>")
 nnoremap("<silent> <Leader>dl", "<Cmd>lua require'dap'.run_last()<CR>")
 -- Debug + Test
@@ -32,6 +33,5 @@ nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-o>", "<C-o>zz")
 nnoremap("<C-i>", "<C-i>zz")
 
-
 -- Terminal emulation only
-vim.cmd [[ :tnoremap <Esc> <C-\><C-n> ]]
+vim.cmd([[ :tnoremap <Esc> <C-\><C-n> ]])
