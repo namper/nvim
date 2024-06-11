@@ -50,4 +50,12 @@ vim.api.nvim_set_hl(0, "TreesitterContextSeparator", {  fg='#323232', bg="#161a1
 vim.api.nvim_set_hl(0, "Normal", { bg='#131919',})
 
 
--- @TODO: Add more colors
+
+local hooks = require "ibl.hooks"
+
+hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+    if vim.g.colors_name == "paper" then
+        vim.api.nvim_set_hl(0, "IblIndent", {  fg='grey' })
+        vim.api.nvim_set_hl(0, "IblScope", {  fg='grey' })
+    end
+end)
