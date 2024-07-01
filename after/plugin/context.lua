@@ -11,7 +11,7 @@ require'treesitter-context'.setup{
             'class',
             'function',
             'method',
-            'for', 
+            'for',
             'while',
             'if',
             'switch',
@@ -20,7 +20,7 @@ require'treesitter-context'.setup{
         python = {
             'def',
             'elif',
-        }
+        },
         -- Example for a specific filetype.
         -- If a pattern is missing, *open a PR* so everyone can benefit.
         --   rust = {
@@ -40,6 +40,9 @@ require'treesitter-context'.setup{
     zindex = 20, -- The Z-index of the context window
     mode = 'topline',  -- Line used to calculate context. Choices: 'cursor', 'topline'
     separator = '-', -- Separator between context and content. Should be a single character string, like '-'|
+    on_attach = function(bufnr)
+        return vim.bo[bufnr].filetype ~= 'tex'
+    end
 }
 
 vim.cmd [[hi TreesitterContextBottom guisp=Blue]]
