@@ -1,7 +1,6 @@
 local keyamp = require("namper.keymap")
 
 local nnoremap = keyamp.nnoremap
-local inoremap = keyamp.inoremap
 
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
 
@@ -38,19 +37,3 @@ nnoremap("<C-i>", "<C-i>zz")
 
 -- Terminal emulation only
 vim.cmd([[ :tnoremap <Esc> <C-\><C-n> ]])
-
-
-
-vim.keymap.set("i", "<F12>", function()
-    -- Check if current keymap is not null
-    if vim.o.keymap == "" then
-        vim.cmd("set keymap=ge-qwerty")
-
-    else
-        vim.cmd("set keymap=")
-    end
-    -- Simulate pressing <Esc> to go to normal mode and then 'i' to return to insert mode
-    local esc = vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
-    local i = vim.api.nvim_replace_termcodes("a", true, false, true)
-    vim.api.nvim_feedkeys(esc .. i, 'n', true)
-end)
