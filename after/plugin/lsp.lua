@@ -128,14 +128,19 @@ sources = cmp.config.sources({
 })
 
 
+cmp.setup.filetype({ "sql" }, {
+    sources = {
+        { name = 'vim-dadbod-completion' },
+        { name = 'buffer' },
+    }
+})
+
+
 require("lsp_lines").setup()
 vim.diagnostic.config({
   virtual_text = true,
   virtual_lines = false,
 })
-
-
-
 
 require('lean').setup{
   -- Enable the Lean language server(s)?

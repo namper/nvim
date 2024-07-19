@@ -3,3 +3,6 @@ plugin/*
 db_ui/connections.json
 spell/*
 .luarc.json
+.env
+
+spell/en.utf-8.add.spl
