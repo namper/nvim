@@ -1,0 +1,31 @@
+with connection as (
+    select ur.user_receiver_id, ur.user_id from user_receiver ur
+    inner join campaign camp on ur.campaign_id = camp.campaign_id 
+        and camp.campaign_archived = 0 
+        and camp.client_id in (731, 1013, 2045, 732, 2444, 2443, 2249, 2912, 2442, 3242, 3339)
+    where ur.user_receiver_invalid = 0
+        and ur.user_receiver_creation_date_new >= DATE(NOW() - INTERVAL 7 DAY)
+        and ur.user_receiver_creation_date_new < CURRENT_DATE
+        and ur.user_receiver_is_connected = 1
+),
+msg as (
+    select m.message_id, m.message_type, m.user_id from message m 
+    inner join campaign camp on m.campaign_id = camp.campaign_id 
+        and camp.campaign_archived = 0 
+        and camp.client_id in (731, 1013, 2045, 732, 2444, 2443, 2249, 2912, 2442, 3242, 3339)
+    where m.message_invalid in (0, 13, 21) and m.message_type in ('invite', 'response')
+        and m.message_scan_date >= DATE(NOW() - INTERVAL 7 DAY)
+        and m.message_scan_date < CURRENT_DATE
+)
+select c.client_id, c.client_email, u.user_id, u.user_email,
+count(if(m.message_type = 'invite', 1, null)) as invites_count,
+count(if(m.message_type = 'response', 1, null)) as responses_count,
+count(conn.user_receiver_id) as connections_count
+from user u 
+    inner join client c on  u.client_id = c.client_id and c.client_id in (731, 1013, 2045, 732, 2444, 2443, 2249, 2912, 2442, 3242, 3339)
+    left join connection conn on conn.user_id = u.user_id
+    left join msg m on m.user_id = u.user_id
+where user_archived = 0
+group by c.client_id, c.client_email, u.user_id, u.user_email
+order by c.client_id, u.user_id;
+;
