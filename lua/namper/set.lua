@@ -55,6 +55,9 @@ vim.opt.listchars = { trail=".", tab="▸ ", nbsp="␣" }
 -- update time
 vim.opt.updatetime = 50
 
+-- No swap files
+vim.opt.swapfile = false
+
 -- Disable comment continuation
 vim.opt.formatoptions:remove{ "r", "c", "o" }
 vim.cmd([[autocmd BufEnter * set formatoptions-=cro]])
