@@ -63,7 +63,6 @@ return require('packer').startup(function(use)
     -- lua line
     use 'nvim-lualine/lualine.nvim'
     -- 'Neovim as LSP Server'
-    use "jose-elias-alvarez/null-ls.nvim"
     use "davidmh/cspell.nvim"
     -- Db UI
     use {
@@ -95,19 +94,18 @@ return require('packer').startup(function(use)
         'lervag/vimtex',
     }
     use {
-        "smoka7/multicursors.nvim",
-        requires = {
-            'smoka7/hydra.nvim',
-        }
-    }
-    use {
       "jiaoshijie/undotree",
       requires = {
         "nvim-lua/plenary.nvim",
       },
     }
-
     use {"tpope/vim-dotenv"}
+    use {
+      "nvimtools/none-ls.nvim",
+      requires = {
+        "nvimtools/none-ls-extras.nvim",
+      },
+    }
 
 end
 )
