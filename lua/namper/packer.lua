@@ -106,6 +106,12 @@ return require('packer').startup(function(use)
         "nvimtools/none-ls-extras.nvim",
       },
     }
-
+    use {
+      "CopilotC-Nvim/CopilotChat.nvim",
+      requires = {
+        { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+      },
+      run = "make tiktoken"
+    }
 end
 )
